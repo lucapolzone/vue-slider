@@ -7,6 +7,7 @@
   <!-- seo -->
   <meta name="author" content="Luca Polzone" />
   <meta name="description" content="Esercizio - Vue Slider"/>
+  <meta name="keywords" content="" />
   <!-- title -->
   <title>Esercizio - Vue Slider</title>
   <!-- Bootstrap link -->
@@ -20,17 +21,20 @@
 </head>
 <body>
 
-<div class="main d-flex align-items-center">
+<div class="main d-flex align-items-center" id="app">
 
 	<!-- Contenitore carosello -->
   <div class="carousel_container mx-auto d-flex justify-content-center">
 
+    <!-- Carosello -->
     <div class="wrapper_slides">
-      <img src="./img/01.webp" class="slide active">
-      <img src="./img/02.webp" class="slide">
-      <img src="./img/03.webp" class="slide">
-      <img src="./img/04.webp" class="slide">
-      <img src="./img/05.webp" class="slide">
+    	<!-- Wrapper thumbs -->
+      <div class="wrapper-thumbs">
+      </div>
+      <!-- Fine Wrapper thumbs -->
+      <img :src="slides[0]" class="slide active">
+      
+      <!-- <img src="./img/01.webp" class="slide active"> -->
     </div>
   
     <!-- * Freccia sù  -->
@@ -42,6 +46,7 @@
     <div class="wrapper-icon" id="arrow-down">
       <i class="bi bi-arrow-down-circle-fill"></i>
     </div>
+  
   
   
   </div>
