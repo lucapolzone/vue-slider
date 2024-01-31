@@ -30,20 +30,27 @@
     <div class="wrapper_slides">
     	<!-- Wrapper thumbs -->
       <div class="wrapper-thumbs">
+        <img 
+          v-for="(slide, index) of slides" 
+          :src="slide" 
+          :class="{ 'thumb-active': index === activeSlide }"
+          @click = "gotoSlide(index)"
+          >
       </div>
-      <!-- Fine Wrapper thumbs -->
-      <img :src="slides[0]" class="slide active">
+      <!-- Fine thumbs -->
+
+      <img :src="slides[activeSlide]" class="slide">
       
       <!-- <img src="./img/01.webp" class="slide active"> -->
     </div>
   
     <!-- * Freccia sù  -->
-    <div class="wrapper-icon" id="arrow-up">
+    <div class="wrapper-icon" id="arrow-up" @click="prevClick()">
       <i class="bi bi-arrow-up-circle-fill"></i>
     </div>
     
     <!-- * Freccia giù  -->
-    <div class="wrapper-icon" id="arrow-down">
+    <div class="wrapper-icon" id="arrow-down" @click="nextClick()">
       <i class="bi bi-arrow-down-circle-fill"></i>
     </div>
   

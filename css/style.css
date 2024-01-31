@@ -27,7 +27,6 @@ img {
 .wrapper-thumbs {
   position: absolute;
   right: 0;
-  background-color: aqua;
   width: 250px;
   height: 100%;
   opacity: 0;
@@ -42,17 +41,16 @@ img {
   object-fit: cover;
 }
 
+.thumb-active {
+  border: 3px solid aqua;
+}
 
 .slide {
   height: 100%;
   object-fit: cover;
   /* display: none; */
-  display: block;
 }
 
-.active {
-  display: block;
-}
 
 i {
   color: white;
